@@ -3,7 +3,9 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
   ],
+  important: '#root',
   theme: {
     fontSize: {
       xs: ['12px', '16px'],
@@ -23,7 +25,9 @@ export default {
       },
       colors: {
         'primary': "#ECEEFF",
-        "coral-red": "#FF6452",
+        "coral-red": "#c1121f",
+        "hover-red": "#e62837 ",
+        "active-red": "#a20e19 ",
         "slate-gray": "#6D6D6D",
         "pale-blue": "#F5F6FF",
         "white-400": "rgba(255, 255, 255, 0.80)"
@@ -40,5 +44,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  corePlugins: {
+    preflight: false,
+  },
 }

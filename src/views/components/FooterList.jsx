@@ -1,20 +1,21 @@
-
+import { Link } from "react-router-dom"
 const FooterList = ({ title, links }) => {
     return (
         <div >
             <h3 className="text-white text-xl font-bold">{title}</h3>
-            <ul className="mt-4">
+            <ul className="mt-4  list-none">
                 {links.map((link) => (
                     <li key={link.name}
-                        className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer "
+
                     >
-                        <a
-                            href={link.link}
+                        <Link
+                            to={link.link}
+                            className="no-underline"
                         >
-                            <p >
+                            <p className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer ">
                                 {link.name}
                             </p>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>

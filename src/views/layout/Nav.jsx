@@ -1,12 +1,16 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
-
-import { hamburger } from '../../assets/icons'
 import { headerLogo } from '../../assets/images'
-
 import { navLinks } from '../../data'
 import { SelectedContext } from './Layout'
+import { ButtonIcon } from '../components'
+import { Collapse, Box } from '@mui/material'
+import { Menu, Close } from '@mui/icons-material'
 const Nav = () => {
+    const [list, setList] = useState(false);
+    const openList = () => {
+        list ? setList(false) : setList(true)
+    }
     const { selected, setSelected } = useContext(SelectedContext)
     const setLinks = () => (
         navLinks.map((item) => (
@@ -14,13 +18,13 @@ const Nav = () => {
                 {item.isLink
                     ? <Link
                         to={item.href}
-                        className={`font-montserrat leading-normal text-lg ${selected === item.href ? 'text-slate-900 font-bold' : 'text-slate-gray'} `}
+                        className={`font-montserrat no-underline leading-normal text-lg ${selected === item.href ? 'text-slate-900 font-bold' : 'text-slate-gray'} `}
                     >
                         <p className='hover:text-slate-900'>{item.label}</p>
                     </Link>
                     : <a
                         href={item.href}
-                        className='font-montserrat leading-normal text-lg text-slate-gray '
+                        className='font-montserrat no-underline leading-normal text-lg text-slate-gray '
                     >
                         <p className='hover:text-slate-900'>{item.label}</p>
                     </a>
@@ -29,8 +33,8 @@ const Nav = () => {
         ))
     )
     return (
-        <header className='padding-x  fixed z-50 w-full pt-4 bg-white '>
-            <nav className=' flex justify-between  max-container shadow-3xl p-6 rounded-md'>
+        <header className='padding-s  fixed z-50 w-full pt-4  bg-white '>
+            <nav className=' flex justify-between  max-container shadow-3xl md:p-6 p-4 rounded-md'>
                 <Link to="/home">
                     <img
                         src={headerLogo}
@@ -41,21 +45,22 @@ const Nav = () => {
                         onClick={() => setSelected('/home')}
                     />
                 </Link>
-                <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
+                <ul className='flex-1 flex list-none justify-center items-center gap-16 max-lg:hidden'>
                     {setLinks()}
                 </ul>
+
+
                 <div className='hidden max-lg:block '>
-                    <img
-                        src={hamburger}
-                        alt='hamburgar'
-                        width={25}
-                        height={25}
-                        className='cursor-pointer'
-
-                    />
+                    <ButtonIcon icon={list ? <Close /> : <Menu />} action={openList} />
                 </div>
-
             </nav>
+            <Collapse in={list}>
+                <Box sx={{ display: "block", background: 'white', paddingY: '1rem' }}>
+                    <ul className='list-none flex flex-col justify-center items-center gap-4'>
+                        {setLinks()}
+                    </ul>
+                </Box>
+            </Collapse>
         </header>
     )
 }

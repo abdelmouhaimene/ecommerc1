@@ -4,4 +4,5 @@ import ShoeCard from "./ShoeCard"
 import ServiceCard from "./ServiceCard"
 import ReviewCard from "./ReviewCard"
 import FooterList from "./FooterList"
-export { Button, ShoeCard, ServiceCard, ReviewCard, FooterList }
+import ButtonIcon from "./ButtonIcon"
+export { Button, ShoeCard, ServiceCard, ReviewCard, FooterList, ButtonIcon }
