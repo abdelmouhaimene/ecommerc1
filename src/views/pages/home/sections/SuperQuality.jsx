@@ -20,7 +20,7 @@ const SuperQuality = () => {
                 </div>
             </div>
             <div className="flex-1 flex justify-center items-center">
-                <img src={shoe8} alt="shoe8" width={570} height={522} />
+                <img src={shoe8} alt="shoe8" width={570} height={522} className="w-full h-auto" />
             </div>
         </section>
     )

@@ -2,8 +2,12 @@ import { copyrightSign } from "../../assets/icons"
 import { footerLogo } from "../../assets/images"
 import { FooterList } from "../components"
 import { footerLinks, socialMedia } from "../../data"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
+    const getYear = () => {
+        return new Date().getFullYear();
+    }
     return (
         <footer
             id="contact-us"
@@ -26,14 +30,16 @@ const Footer = () => {
                     <div className="flex items-center gap-5 mt-8">
                         {
                             socialMedia.map((icon) => (
-                                <div key={icon.alt} className="flex justify-center items-center w-12 h-12 bg-white rounded-full">
-                                    <img
-                                        alt={icon.alt}
-                                        src={icon.src}
-                                        height={24}
-                                        width={24}
-                                    />
-                                </div>
+                                <Link key={icon.alt} to={icon.link}>
+                                    <div className="flex justify-center items-center w-12 h-12 bg-white rounded-full hover:bg-white-400">
+                                        <img
+                                            alt={icon.alt}
+                                            src={icon.src}
+                                            height={24}
+                                            width={24}
+                                        />
+                                    </div>
+                                </Link>
                             ))
                         }
                     </div>
@@ -58,7 +64,7 @@ const Footer = () => {
                         height={20}
                         className="rounded-full m-0"
                     />
-                    <p>Copyright. All rights reserved.</p>
+                    <p>Copyright {getYear()} . All rights reserved.</p>
                 </div>
                 <p className="font-montserrat cursor-pointer">
 
