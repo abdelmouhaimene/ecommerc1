@@ -2,6 +2,8 @@
 import { lazy } from 'react';
 import { Navigate } from "react-router-dom";
 const Home = lazy(() => import("../views/pages/home/Home"))
+const Error = lazy(() => import("../views/pages/error/Error"))
+
 // const Error = lazy(() => import("../views/pages/Error/Error"))
 // const Bank = lazy(() => import("../views/pages/Bank/Bank"))
 // const Products = lazy(() => import("../views/pages/Products/Products"))
@@ -18,6 +20,10 @@ const routes = [
     {
         path: "/home",
         element: <Home />,
+    },
+    {
+        path: "*",
+        element: <Error />,
     },
     // {
     //     path: "/provider",
@@ -43,9 +49,6 @@ const routes = [
     //     path: "/merchant",
     //     element: <Merchant />,
     // },
-    // {
-    //     path: "*",
-    //     element: <Error />,
-    // },
+
 ]
 export default routes;
