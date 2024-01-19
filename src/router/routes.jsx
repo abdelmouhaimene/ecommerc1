@@ -3,8 +3,8 @@ import { lazy } from 'react';
 import { Navigate } from "react-router-dom";
 const Home = lazy(() => import("../views/pages/home/Home"))
 const Error = lazy(() => import("../views/pages/error/Error"))
-
-// const Error = lazy(() => import("../views/pages/Error/Error"))
+const Products = lazy(() => import("../views/pages/products/Products"))
+const Clothes = lazy(() => import("../views/pages/clothes/Clothes"))
 // const Bank = lazy(() => import("../views/pages/Bank/Bank"))
 // const Products = lazy(() => import("../views/pages/Products/Products"))
 // const Provider = lazy(() => import("../views/pages/Provider/Provider"))
@@ -25,10 +25,26 @@ const routes = [
         path: "*",
         element: <Error />,
     },
-    // {
-    //     path: "/provider",
-    //     element: <Provider />,
-    // },
+    {
+        path: "/products",
+        element: <Products />,
+    },
+    {
+        path: "/products/clothes",
+        element: <Clothes />,
+    },
+    {
+        path: "/products/accesoirs",
+        element: <Products />,
+    },
+    {
+        path: "/products/cosmitics",
+        element: <Products />,
+    },
+    {
+        path: "/products/electronics",
+        element: <Products />,
+    },
     // {
     //     path: "/bank",
     //     element: <Bank />,

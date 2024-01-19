@@ -1,9 +1,15 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import {
+    bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, accesoirs,
+    clothes,
+    cosmetics,
+    electronics
+} from "../assets/images";
 
 export const navLinks = [
     { href: "/home", label: "Home", isLink: true },
     { href: "/about", label: "About Us", isLink: true },
+    { href: "/categories", label: "Categories", isLink: true },
     { href: "/products", label: "Products", isLink: true },
     { href: "#contact-us", label: "Contact Us", isLink: false },
 ];
@@ -116,6 +122,13 @@ export const footerLinks = [
         ],
     },
 ];
+
+export const categories = [
+    { id: 0, name: 'clothes', products: 157, imgURL: clothes },
+    { id: 1, name: 'accesoirs', products: 23, imgURL: accesoirs },
+    { id: 2, name: 'cosmitics', products: 208, imgURL: cosmetics },
+    { id: 3, name: 'electronics', products: 49, imgURL: electronics },
+]
 
 export const socialMedia = [
     { src: facebook, alt: "facebook logo", link: "https://facebook.com" },

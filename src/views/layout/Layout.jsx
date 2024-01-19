@@ -15,7 +15,7 @@ const Layout = () => {
             <div
             // id={id}
             >
-                <div>
+                <div className='relative' >
                     <Nav />
                     <div >
                         <Outlet />

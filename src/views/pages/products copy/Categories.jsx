@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Button, CategoryCard, SmallButtonIcon,ProductsNav } from '../../components'
 import { categories } from '../../../data'
 // import ProductsNav from '../../components/ProductsNav'
-const Products = () => {
+const Categories = () => {
     const { t } = useTranslation()
     const location = useLocation().pathname;
     const navigate = useNavigate()
@@ -28,4 +28,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default Categories

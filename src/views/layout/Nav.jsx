@@ -20,7 +20,7 @@ const Nav = () => {
                         to={item.href}
                         className={`font-montserrat no-underline leading-normal text-lg ${selected === item.href ? 'text-slate-900 font-bold' : 'text-slate-gray'} `}
                     >
-                        <p className='hover:text-slate-900'>{item.label}</p>
+                        <p className='hover:text-slate-900' onClick={() => {setSelected(item.href)}}>{item.label}</p>
                     </Link>
                     : <a
                         href={item.href}

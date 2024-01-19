@@ -23,6 +23,12 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 import errorPic from './error.png'
 
+import accesoirs from './accesoirs.jpg'
+import clothes from './clothes.jpg'
+import cosmetics from './cosmetics.jpg'
+import electronics from './electronics.jpg'
+
+
 export {
     bigShoe1,
     bigShoe2,
@@ -46,5 +52,10 @@ export {
     thumbnailShoe2,
     thumbnailShoe3,
 
-    errorPic
+    errorPic,
+
+    accesoirs,
+    clothes,
+    cosmetics,
+    electronics
 }
