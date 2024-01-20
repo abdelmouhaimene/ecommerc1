@@ -4,12 +4,8 @@ import { Navigate } from "react-router-dom";
 const Home = lazy(() => import("../views/pages/home/Home"))
 const Error = lazy(() => import("../views/pages/error/Error"))
 const Products = lazy(() => import("../views/pages/products/Products"))
-const Clothes = lazy(() => import("../views/pages/clothes/Clothes"))
-// const Bank = lazy(() => import("../views/pages/Bank/Bank"))
-// const Products = lazy(() => import("../views/pages/Products/Products"))
-// const Provider = lazy(() => import("../views/pages/Provider/Provider"))
-// const Supplier = lazy(() => import("../views/pages/Supplier/Supplier"))
-// const Merchant = lazy(() => import("../views/pages/Merchant/Merchant"))
+const Categories = lazy(() => import("../views/pages/categories/Categories"))
+
 
 
 const routes = [
@@ -30,22 +26,14 @@ const routes = [
         element: <Products />,
     },
     {
-        path: "/products/clothes",
-        element: <Clothes />,
+        path: "/categories",
+        element: <Categories />,
     },
     {
-        path: "/products/accesoirs",
+        path: "/products/:categoryName",
         element: <Products />,
     },
-    {
-        path: "/products/cosmitics",
-        element: <Products />,
-    },
-    {
-        path: "/products/electronics",
-        element: <Products />,
-    },
-    // {
+     // {
     //     path: "/bank",
     //     element: <Bank />,
     // },
