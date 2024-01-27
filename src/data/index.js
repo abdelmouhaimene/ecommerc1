@@ -8,7 +8,6 @@ import {
 
 export const navLinks = [
     { href: "/home", label: "Home", isLink: true },
-    { href: "/about", label: "About Us", isLink: true },
     { href: "/categories", label: "Categories", isLink: true },
     { href: "/products", label: "Products", isLink: true },
     { href: "#contact-us", label: "Contact Us", isLink: false },

@@ -17,10 +17,10 @@ const Layout = () => {
             >
                 <div className='relative' >
                     <Nav />
-                    <div >
+                    <div className='z-0'>
                         <Outlet />
                     </div>
-                    <section className="bg-black padding-x padding-t pb-8">
+                    <section className="bg-black padding-x padding-t pb-8 z-10">
                         <Footer />
                     </section>
                 </div>
