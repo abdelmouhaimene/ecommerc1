@@ -1,7 +1,7 @@
 
 import { lazy } from 'react';
 import { Navigate } from "react-router-dom";
-const ProductPage = lazy(() => import( '../views/pages/productPage/productPage'))
+// const ProductPage = lazy(() => import( '../views/pages/productPage/productPage'))
 const Home = lazy(() => import("../views/pages/home/Home"))
 const Error = lazy(() => import("../views/pages/error/Error"))
 const Products = lazy(() => import("../views/pages/products/Products"))
@@ -34,10 +34,10 @@ const routes = [
         path: "/products/:categoryName",
         element: <Products />,
     },
-    {
-        path: "/product/:id",
-        element: <ProductPage />,
-    },
+    // {
+    //     path: "/product/:id",
+    //     element: <ProductPage />,
+    // },
      // {
     //     path: "/bank",
     //     element: <Bank />,
