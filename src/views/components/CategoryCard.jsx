@@ -13,7 +13,7 @@ const CategoryCard = ({ imgURL, name, products }) => {
             style={{ backgroundImage: `url(${imgURL})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
             <Box className='h-1/2 flex justify-center items-end sm:pb-2 pb-4'>
-                <Typography className='font-palanquin font-bold text-white text-4xl '>
+                <Typography className='font-palanquin font-bold text-white text-4xl drop-shadow-2xl '>
                     {name}
                 </Typography>
             </Box>

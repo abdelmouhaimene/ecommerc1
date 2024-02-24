@@ -23,10 +23,10 @@ import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
 import errorPic from './error.png'
 
-import accesoirs from './accesoirs.jpg'
-import clothes from './clothes.jpg'
-import cosmetics from './cosmetics.jpg'
-import electronics from './electronics.jpg'
+import accesoirs from './accesoirs.webp'
+import clothes from './clothes.webp'
+import jackets from './jacket.webp'
+import tracksuits from './tracksuit.webp'
 
 
 export {
@@ -56,6 +56,6 @@ export {
 
     accesoirs,
     clothes,
-    cosmetics,
-    electronics
+    jackets,
+    tracksuits
 }

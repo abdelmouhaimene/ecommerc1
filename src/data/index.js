@@ -2,8 +2,8 @@ import { facebook, instagram, shieldTick, support, truckFast, twitter } from "..
 import {
     bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, accesoirs,
     clothes,
-    cosmetics,
-    electronics
+    tracksuits,
+    jackets
 } from "../assets/images";
 
 export const navLinks = [
@@ -123,10 +123,10 @@ export const footerLinks = [
 ];
 
 export const categories = [
-    { id: 0, name: 'clothes', products: 157, imgURL: clothes },
-    { id: 1, name: 'accesoirs', products: 23, imgURL: accesoirs },
-    { id: 2, name: 'cosmitics', products: 208, imgURL: cosmetics },
-    { id: 3, name: 'electronics', products: 49, imgURL: electronics },
+    { id: 0, name: 'Shoes', products: 157, imgURL: clothes },
+    { id: 1, name: 'Accesoirs', products: 23, imgURL: accesoirs },
+    { id: 2, name: 'Tracksuit', products: 208, imgURL: tracksuits },
+    { id: 3, name: 'Jacket', products: 49, imgURL: jackets },
 ]
 
 export const socialMedia = [
