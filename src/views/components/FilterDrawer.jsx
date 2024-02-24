@@ -25,7 +25,7 @@ const FilterDrawer = ({type}) => {
                                     <RadioGroup
                                         // aria-labelledby="demo-radio-buttons-group-label"
                                         value={category}
-                                        onChange={(event) => handleChangeRadio(setCategory,event)}
+                                        onChange={(event) => handleChangeRadioNavigate(setCategory,event)}
                                         name="radio-buttons-categoty"
                                     >
                                         <FormControlLabel value='Clothes' control={<Radio />} label='Clothes' />
@@ -49,7 +49,7 @@ const FilterDrawer = ({type}) => {
                                 </FormControl>
                             </AccordionDetails>
                         </Accordion>
-                        {(type && type !== 'electronics') && <Accordion>
+                        {/* {(type && type !== 'electronics') && <Accordion>
                             <AccordionSummary expandIcon={<ExpandMore/>}>
                             Gendre
                             </AccordionSummary>
@@ -82,7 +82,7 @@ const FilterDrawer = ({type}) => {
                                     </RadioGroup>
                                 </FormControl>
                             </AccordionDetails>
-                        </Accordion>}
+                        </Accordion>} */}
 
                     </Box>
                 </Box>

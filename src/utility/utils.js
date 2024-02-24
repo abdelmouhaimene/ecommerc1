@@ -1,3 +1,4 @@
+
 export function extractProductsLink(inputString) {
     // Check if the string starts with "/products/"
     if (inputString.startsWith('/products/')) {
@@ -28,7 +29,7 @@ export function convertToProductPath(inputString) {
 
 export function handleChangeRadioNavigate(setValue,event) {
     setValue(event.target.value);
-    navigate(convertToProductPath(event.target.value))
+    // navigate(convertToProductPath(event.target.value))
   };
 
   export function handleChangeRadio(setValue,event) {
