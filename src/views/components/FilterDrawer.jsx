@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { Box,  Typography, Accordion, AccordionSummary, AccordionDetails, FormControl, FormControlLabel, Checkbox, Radio, RadioGroup } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
-import { extractProductsLink,handleChangeRadioNavigate } from '../../utility/Utils'
+import { extractProductsLink,handleChangeRadioNavigate } from '../../utility/utils'
 const FilterDrawer = ({type}) => {
     const { t } = useTranslation()
     const location = useLocation().pathname;
